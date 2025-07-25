@@ -4,12 +4,12 @@ import threading
 import time
 import requests
 
-API_URL = "https://restaurant-backend-uyq0.onrender.com"
+API_URL = "https://resplendent-fairy-d0f38f.netlify.app"
 
 def poll_orders():
     while True:
         try:
-            response = requests.get("https://restaurant-backend-uyq0.onrender.com")  # Optional endpoint for future
+            response = requests.get("https://resplendent-fairy-d0f38f.netlify.app")  # Optional endpoint for future
             if response.ok:
                 data = response.json()
                 if data:
