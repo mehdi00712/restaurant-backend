@@ -18,7 +18,8 @@ def receive_order():
 def get_orders():
     if orders:
         return jsonify(orders.pop(0))  # Return and remove first order
-    return jsonify({})  # No orders yet
+    else:
+        return jsonify({})  # No orders yet
 
 if __name__ == "__main__":
     # ✅ Bind to 0.0.0.0 and use Render's assigned PORT
