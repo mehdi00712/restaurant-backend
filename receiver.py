@@ -9,7 +9,7 @@ API_URL = "https://restaurant-backend-uyq0.onrender.com"
 def poll_orders():
     while True:
         try:
-            response = requests.get("https://restaurant-backend-uyq0.onrender.com")  # Optional endpoint for future
+            response = requests.get("https://restaurant-backend-uyq0.onrender.com/receive_order")  # Optional endpoint for future
             if response.ok:
                 data = response.json()
                 if data:
