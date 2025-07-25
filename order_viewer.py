@@ -5,7 +5,7 @@ import requests
 import time
 
 # 🔁 Replace this with your live Render API URL
-RENDER_API_URL = "https://restaurant-backend-uyq0.onrender.com"
+RENDER_API_URL = "https://restaurant-backend-uyq0.onrender.com/receive_order"
 
 def fetch_orders():
     while True:
