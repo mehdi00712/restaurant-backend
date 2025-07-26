@@ -4,7 +4,9 @@ import threading
 import time
 import requests
 
-API_URL = "https://resplendent-fairy-d0f38f.netlify.app"
+API_URL = "https://restaurant-backend-uyq0.onrender.com/get_orders"
+
+r = requests.get(API_URL)
 
 def poll_orders():
     while True:
