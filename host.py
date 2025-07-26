@@ -12,16 +12,15 @@ def receive_order():
     data = request.get_json()
     print("ORDER RECEIVED:", data)
     orders.append(data)
-    return {"status": "received"}, 200
+    return jsonify({"status": "received"}), 200  # ✅ FIXED: use jsonify
 
 @app.route("/get_orders", methods=["GET"])
 def get_orders():
     if orders:
-        return jsonify(orders.pop(0))  # Return and remove first order
+        return jsonify(orders.pop(0))
     else:
-        return jsonify({})  # No orders yet
-
+        return jsonify({})
+        
 if __name__ == "__main__":
-    # ✅ Bind to 0.0.0.0 and use Render's assigned PORT
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
